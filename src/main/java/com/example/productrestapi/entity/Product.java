@@ -25,18 +25,6 @@ public class Product implements Serializable {
     public Product() {
     }
 
-
-    public Product(Integer productid) {
-        this.productid = productid;
-    }
-
-    public Product(Integer productid, String name, long price, String image) {
-        this.productid = productid;
-        this.name = name;
-        this.price = price;
-        this.image = image;
-    }
-
     public Integer getProductid() {
         return productid;
     }
@@ -69,29 +57,13 @@ public class Product implements Serializable {
         this.image = image;
     }
 
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (productid != null ? productid.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Product)) {
-            return false;
-        }
-        Product other = (Product) object;
-        if ((this.productid == null && other.productid != null) || (this.productid != null && !this.productid.equals(other.productid))) {
-            return false;
-        }
-        return true;
-    }
-
     @Override
     public String toString() {
-        return "laptrinh.com.model.Product[ productid=" + productid + " ]";
+        return "Product{" +
+                "product_id=" + productid +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", image='" + image + '\'' +
+                '}';
     }
 }
